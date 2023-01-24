@@ -1,0 +1,120 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.scene {
+    width: 100vw;
+    height: 100vh;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+}
+
+.choices {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+}
+
+.choice-box {
+    width: 300px;
+    height: 300px;
+    background-color: #4AF626;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px;
+}
+
+.choice-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.scoreboard {
+    background-color: rgb(0, 0, 0);
+    border: 3px solid #4AF626;
+    width: 640px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #4AF626;
+    font-size: 40px;
+    line-height: 1;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.controls {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 50px;
+    width: 640px;
+}
+
+.controls__btn {
+    border: 0;
+    background-color: transparent;
+    padding: 20px;
+    height: 100px;
+    border: 3px solid #4AF626;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.controls__btn:hover {
+    background-color: #4AF626;
+}
+
+.controls__btn img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+.modal-overlay {
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.modal {
+    background-color:rgb(0, 0, 0);
+    width: 350px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.modal button {
+    padding: 0;
+    border: 0;
+    background-color: #4AF626;
+    color: rgb(0, 0, 0);
+    padding: 5px 10px;
+    font-size: 20px;
+    margin: 0 5px;
+    cursor: pointer;
+}
+
+.modal-title {
+    color: #4AF626;
+    font-size: 24px;
+    margin-bottom: 15px;
+}

@@ -8,13 +8,27 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <h2>Computer choice:<span id="computer-choice"></span></h2>
-    <h2>User choice:<span id="user-choice"></span></h2>
-    <h2>Result:<span id="result"></span></h2>
-    
-    <button id="rock">rock</button>
-    <button id="paper">paper</button>
-    <button id="scissors">scissors</button>
+    <div class="scene">
+        <div class="scoreboard" id="result">Rock, Paper, Scissors!</div>
+        <div class="choices">
+            <div class="choice-box" id="user-choice">
+            </div>
+            <div class="choice-box" id="computer-choice">
+            </div>
+        </div>
+        <div class="controls">
+            <button class="controls__btn" id="rock">
+                <img src="./assets/rock.png">
+            </button>
+            <button class="controls__btn" id="paper">
+                <img src="./assets/paper.png">
+            </button>
+            <button class="controls__btn" id="scissors">
+                <img src="./assets/scissors.png">
+            </button>
+        </div>
+        <audio id="audio" src="./stay-retro.mp3" type="audio/mpeg" autoplay />
+    </div>
 
     <script src="./script.js"></script>
 </body>
