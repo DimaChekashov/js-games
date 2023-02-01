@@ -8,28 +8,20 @@ const cardArray = [
         img: "images/cheeseburger.png",
     },
     {
-        name: "hotdog",
-        img: "images/hotdog.png",
-    },
-    {
         name: "ice-cream",
         img: "images/ice-cream.png",
-    },
-    {
-        name: "milkshake",
-        img: "images/milkshake.png",
     },
     {
         name: "pizza",
         img: "images/pizza.png",
     },
     {
-        name: "hotdog",
-        img: "images/hotdog.png",
+        name: "milkshake",
+        img: "images/milkshake.png",
     },
     {
-        name: "ice-cream",
-        img: "images/ice-cream.png",
+        name: "hotdog",
+        img: "images/hotdog.png",
     },
     {
         name: "fries",
@@ -40,8 +32,16 @@ const cardArray = [
         img: "images/cheeseburger.png",
     },
     {
+        name: "ice-cream",
+        img: "images/ice-cream.png",
+    },
+    {
         name: "pizza",
         img: "images/pizza.png",
+    },
+    {
+        name: "milkshake",
+        img: "images/milkshake.png",
     },
     {
         name: "hotdog",
