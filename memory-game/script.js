@@ -53,6 +53,8 @@ cardArray.sort(() => 0.5 - Math.random());
 
 const gridDisplay = document.querySelector("#grid");
 const resultDisplay = document.querySelector("#result");
+const logsDisplay = document.querySelector(".logs");
+const audio = document.querySelector("#audio");
 let cardChosen = [];
 let cardChosenIds = [];
 const cardsWon = [];
@@ -77,11 +79,11 @@ function checkMath() {
     if (optionOneId === optionTwoId) {
         cards[optionOneId].setAttribute("src", "./images/blank.png");
         cards[optionTwoId].setAttribute("src", "./images/blank.png");
-        alert("You have clicked the same image!");
+        logsDisplay.textContent = "You have clicked the same image!";
     }
 
     if (cardChosen[0] === cardChosen[1]) {
-        alert("You found a match!");
+        logsDisplay.textContent = "You found a match!";
         cards[optionOneId].setAttribute("src", "./images/white.png");
         cards[optionTwoId].setAttribute("src", "./images/white.png");
         cards[optionOneId].removeEventListener("click", flipCard);
@@ -90,14 +92,14 @@ function checkMath() {
     } else {
         cards[optionOneId].setAttribute("src", "./images/blank.png");
         cards[optionTwoId].setAttribute("src", "./images/blank.png");
-        alert("You wrong!");
+        logsDisplay.textContent = "You wrong!";
     }
     resultDisplay.textContent = cardsWon.length;
     cardChosen = [];
     cardChosenIds = [];
 
     if (cardsWon.length === cardArray.length / 2) {
-        resultDisplay.textContent = "Congratulations you found them all!";
+        resultDisplay.textContent = "Congratulations you win!";
     }
 }
 
@@ -111,3 +113,12 @@ function flipCard() {
         setTimeout(checkMath, 500);
     }
 }
+
+document.querySelector(".sound-btn").addEventListener("click", function () {
+    this.classList.toggle("active");
+    if(audio.paused) {
+        audio.play();
+    } else {
+        audio.pause();
+    }
+});

@@ -8,10 +8,17 @@
     <link rel="stylesheet" href="./style.css">
 </head>
 <body>
+    <button type="button" class="sound-btn">
+        <img src="./images/icon-audio.png" alt="icon audio">
+    </button>
 
-    <h3>Score: <span id="result"></span></h3>
+    <h3 class="score">Score: <span id="result">0</span></h3>
     
     <div id="grid"></div>
+
+    <div class="logs"></div>
+
+    <audio id="audio" src="./save-as.mp3" type="audio/mpeg" autoplay />
 
     <script src="./script.js"></script>
 </body>
